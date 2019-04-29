@@ -60,6 +60,7 @@ test_set = test_datagen.flow_from_directory(
 
 classifier.fit_generator(
         train_set,
+        workers = 4,
         steps_per_epoch=8000,
         epochs=25,
         validation_data=test_set,
